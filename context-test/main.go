@@ -1,9 +1,14 @@
-package context-test
+package main
+
+import (
+	"context"
+	"os"
+)
 
 func main() {
 	ss := slowServer()
 	defer ss.Close()
-	fs := fastServer
+	fs := fastServer()
 	defer fs.Close()
 
 	ctx := context.Background()
