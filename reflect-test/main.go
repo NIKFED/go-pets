@@ -135,9 +135,9 @@ func unmarshalOne(row []string, namePos map[string]int, vv reflect.Value) error 
 
 func main() {
 	data := `name,age,has_pet
-Jon,"100",true
-"Fred ""The Hammer"" Smith",42,false
-Martha,37,"true"
+Nikita,24,true
+"Testing "people"",42,false
+Ann,10,"true"
 `
 	r := csv.NewReader(strings.NewReader(data))
 	allData, err := r.ReadAll()
